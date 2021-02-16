@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 import click
 
+
 @click.command()
-def helloworld():
-    click.echo('Hello World!')
+@click.option("--name")
+def helloworld(name):
+    click.echo(f'Hello {name}!')
+    
 
 if __name__ == '__main__':
-    helloworld()
+   helloworld()
